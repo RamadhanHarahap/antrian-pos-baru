@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambil Antrian - Kantor Pos Padangsidimpuan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="Logo Kantor Pos" id="pasien-logo-img">
+            <h1 id="pasien-instansi-nama">Kantor Pos Padangsidimpuan</h1>
+        </div>
+        <div class="date-time">
+            <div id="pasien-current-time"></div>
+            <div id="pasien-current-date"></div>
+        </div>
+    </header>
+
+    <div class="pasien-container">
+        <div class="take-number-container">
+            <h2>Ambil Nomor Antrian</h2>
+            <p>Silakan tekan tombol di bawah ini untuk mendapatkan nomor antrian Anda. Nomor ini berlaku untuk semua layanan.</p>
+            <button id="take-number-btn" class="primary-btn">Ambil Nomor Antrian</button>
+        </div>
+
+        <div id="queue-result" class="hidden">
+            <div class="queue-result-content">
+                <h2>Nomor Antrian Anda</h2>
+                <div class="result-number" id="result-number"></div>
+                <p>Nomor antrian Anda telah terdaftar. Mohon menunggu hingga nomor Anda dipanggil di layar utama. Terima kasih.</p>
+                <button id="close-result-btn" class="secondary-btn">Tutup</button>
+                <button id="print-ticket-btn" class="primary-btn">Cetak Tiket</button>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="pasien.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antrian Kantor Pos Padangsidimpuan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="Logo Kantor Pos" id="main-logo-img">
+            <h1 id="instansi-nama">Kantor Pos Padangsidimpuan</h1>
+        </div>
+        <div class="date-time">
+            <div id="current-time"></div>
+            <div id="current-date"></div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="left-section">
+            <div class="slideshow-container">
+                <div class="slideshow-wrapper" id="slideshow">
+                    </div>
+                <div class="dots-container" id="dots-container"></div>
+            </div>
+            <div class="running-text-container">
+                <marquee id="running-text"></marquee>
+            </div>
+            
+            <div class="action-container">
+                <a href="pasien.html" class="action-btn">
+                    <span class="btn-text">Ambil Nomor Antrian</span>
+                </a>
+                <a href="admin.html" class="action-btn">
+                    <span class="btn-text">Halaman Admin</span>
+                </a>
+            </div>
+
+        </div>
+        <div class="right-section">
+            <div class="current-queue">
+                <h2>Nomor Panggilan Saat Ini</h2>
+                <div class="queue-number blink" id="
+                ">-</div>
+                <div class="queue-note" id="queue-note"></div>
+            </div>
+            <div class="queue-list">
+                <h2>Antrian Berikutnya</h2>
+                <div class="queue-grid">
+                    <div class="queue-item" id="queue-next-1">-</div>
+                    <div class="queue-item" id="queue-next-2">-</div>
+                    <div class="queue-item" id="queue-next-3">-</div>
+                    <div class="queue-item" id="queue-next-4">-</div>
+                    <div class="queue-item" id="queue-next-5">-</div>
+                    <div class="queue-item" id="queue-next-6">-</div>
+                    <div class="queue-item" id="queue-next-7">-</div>
+                    <div class="queue-item" id="queue-next-8">-</div>
+                    <div class="queue-item" id="queue-next-9">-</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
